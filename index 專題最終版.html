@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>病情諮詢系統</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        body {
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210923/pngtree-health-care-cartoon-style-light-and-shadow-background-image_904163.png');
+            background-size: 120% auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; 
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            z-index: 2;
+            position: relative;
+            max-width: 90%; 
+            margin: 0 auto; 
+        }
+
+        h1 {
+            color: black; 
+            font-size: 35px;
+            margin-bottom: 20px;
+            z-index: 2;
+            text-align: center; 
+        }
+
+        iframe {
+            width: 85%;     
+            height: 500px;
+            border: none;
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        #moreInfoButton {
+            padding: 30px 60px;
+            font-size: 33px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background-color: #0072E3; 
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+            z-index: 2;
+        }
+
+        #moreInfoButton:hover {
+            background-color: #87CEFA; 
+        }
+    </style>
+</head>
+<body>
+    <h1>病情諮詢系統與聊天機器人</h1>
+
+    <div class="container">
+        <!-- BotPress 對話框 -->
+        <iframe 
+            src="https://cdn.botpress.cloud/webchat/v2.4/shareable.html?configUrl=https://files.bpcontent.cloud/2025/04/30/01/20250430014517-UKV10ZR1.json">
+        </iframe>
+
+        <!-- 了解更多病情按鈕 -->
+        <button id="moreInfoButton">了解更多病情</button>
+    </div>
+
+    <!-- JavaScript 監聽按鈕點擊並跳轉 -->
+    <script>
+        document.getElementById("moreInfoButton").addEventListener("click", function() {
+            window.location.href = "https://tpech.gov.taipei/cp.aspx?n=3D7DFAE271347248";
+        });
+    </script>
+</body>
+</html>
